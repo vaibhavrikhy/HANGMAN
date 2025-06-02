@@ -12,23 +12,16 @@ def load_words():
     print("  ", len(wordlist), "words loaded.")
     return wordlist
 
-
-
 def choose_word(wordlist):
     return random.choice(wordlist)
 
 wordlist = load_words()
-
 
 def is_word_guessed(secret_word, letters_guessed):
     for letter in secret_word:
         if letter not in letters_guessed:
             return False
     return True
-
-
-
-
 
 
 def get_guessed_word(secret_word, letters_guessed):
@@ -51,8 +44,6 @@ def get_available_letters(letters_guessed):
             temp += letter
     return temp
 
-    
-    
 
 def hangman(secret_word):
     guesses_left = 6
